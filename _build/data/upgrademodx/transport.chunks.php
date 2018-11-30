@@ -2,7 +2,7 @@
 /**
  * chunks transport file for UpgradeMODX extra
  *
- * Copyright 2015 by Bob Ray <http://bobsguides.com>
+ * Copyright 2015-2018 by Bob Ray <https://bobsguides.com>
  * Created on 08-13-2015
  *
  * @package upgrademodx
@@ -31,18 +31,10 @@ $chunks[1]->fromArray(array (
   'property_preprocess' => false,
   'name' => 'UpgradeMODXTpl',
   'description' => 'Tpl chunk for alert widget',
-  'properties' => NULL,
+  'properties' => 
+  array (
+  ),
 ), '', true, true);
 $chunks[1]->setContent(file_get_contents($sources['source_core'] . '/elements/chunks/upgrademodxtpl.chunk.html'));
-
-$chunks[2] = $modx->newObject('modChunk');
-$chunks[2]->fromArray(array (
-  'id' => 2,
-  'property_preprocess' => false,
-  'name' => 'UpgradeMODXSnippetScriptSource',
-  'description' => 'Source for MODX Upgrade script. Used internally',
-  'properties' => NULL,
-), '', true, true);
-$chunks[2]->setContent(file_get_contents($sources['source_core'] . '/elements/chunks/upgrademodxsnippetscriptsource.chunk.php'));
 
 return $chunks;
